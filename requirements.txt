@@ -1,0 +1,8 @@
+streamlit
+numpy
+pandas
+nltk
+sklearn
+networkx
+tensorflow
+tensorflow_hub
