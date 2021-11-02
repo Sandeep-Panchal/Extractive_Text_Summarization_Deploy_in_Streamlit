@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import nltk
 from nltk.tokenize import sent_tokenize
-from nltk.corpus import stopwords
+# from nltk.corpus import stopwords
 from sklearn.metrics.pairwise import cosine_similarity
 import networkx as nx
 import tensorflow_hub as hub
@@ -29,11 +29,11 @@ def load_func_cache():
     use_model = load_use_model()
 
     # download nltk packages
-    nltk.download('punkt')
-    nltk.download('stopwords')
-    stop_words = stopwords.words('english')
+#     nltk.download('punkt')
+#     nltk.download('stopwords')
+#     stop_words = stopwords.words('english')
 
-    return use_model, stop_words
+    return use_model
 
 ## Data Preparation:
 # Tokenize the entire document/documents by sentence.
