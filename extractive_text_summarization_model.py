@@ -29,7 +29,7 @@ def embed(text, mod):
 def data_preparation(query):
     
 #     sent_tokens = nltk.sent_tokenize(query)
-    sent_tokens = [i.strip() for i in t.split('.') if i.strip()!='']
+    sent_tokens = [i.strip() for i in query.split('.') if i.strip()!='']
 
     # create a dictionary with sentences as key and integers as values
     # this dictionary will be used in later section to get the top n sentences as per document order
