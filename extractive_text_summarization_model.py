@@ -25,7 +25,8 @@ def embed(text, mod):
 # Flatten the tokenized sentences ie [['i am good'], ['i am going out']] becomes ['i amd good', 'i am going out']
 # If necessary, do data cleaning such as removal of punctuations, change to lower case, remove numerics, stopwords, etc.
 def data_preparation(query):
-    
+    # replacing comma with dot so as to tokenize even at comma
+    query = query.replace(',', '.')
     sent_tokens = [i.strip() for i in query.split('.') if i.strip()!='']
 
     # create a dictionary with sentences as key and integers as values
@@ -100,7 +101,7 @@ def call_all_func(query, use_model, top_n_percent=30):
     # calling cosine_similarity_matrix
     cosine_matrix = cosine_similarity_matrix(sent_tokens, sent_vectors)
 
-    top_n = int(len(sent_tokens)*(top_n_percent/100))
+    top_n = int(np.ceil(len(sent_tokens)*(top_n_percent/100)))
     if top_n == 0:
         top_n = 1
 
