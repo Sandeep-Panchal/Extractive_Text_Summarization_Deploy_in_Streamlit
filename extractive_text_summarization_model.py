@@ -1,8 +1,6 @@
 import numpy as np
 import streamlit as st
 import pandas as pd
-# import nltk
-# from nltk.tokenize import sent_tokenize
 from sklearn.metrics.pairwise import cosine_similarity
 import networkx as nx
 import tensorflow_hub as hub
@@ -28,7 +26,6 @@ def embed(text, mod):
 # If necessary, do data cleaning such as removal of punctuations, change to lower case, remove numerics, stopwords, etc.
 def data_preparation(query):
     
-#     sent_tokens = nltk.sent_tokenize(query)
     sent_tokens = [i.strip() for i in query.split('.') if i.strip()!='']
 
     # create a dictionary with sentences as key and integers as values
