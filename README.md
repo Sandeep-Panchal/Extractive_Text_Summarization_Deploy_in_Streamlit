@@ -19,3 +19,6 @@
 
 ### References:
  - https://www.analyticsvidhya.com/blog/2018/11/introduction-text-summarization-textrank-python/
+ 
+### Streamlit App Link:
+ - https://share.streamlit.io/sandeep-panchal/extractive_text_summarization_deploy_in_streamlit/main/extractive_text_summarization_ui.py
